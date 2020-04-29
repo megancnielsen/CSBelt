@@ -1,0 +1,18 @@
+# Login and Registration with Validations
+# Validation messages should display for unsuccessful submissions
+# (Registration) Password with a minimum length of 8 characters
+# (Registration) First Name and Last Name with a minimum length of 2 characters
+# (Registration) Username between 3 and 15 characters
+# (Registration) No duplicate Usernames
+# (Login) Valid Email and Password
+Dashboard
+# Display all hobbies and number of enthusiasts for each hobby
+# Clicking on the name of a hobby should route to a hobby-details page
+Hobby Details
+# Display the name and description of shown Hobby
+Display the names of all users that have added shown hobby
+Include a button to add shown hobby to user's hobbies
+PROFICIENCY RELATED FEATURES NOT REQUIRED FOR A RED BELT
+New Hobby
+Validation messages should display for unsuccessful submissions
+Name and description are required fields

@@ -78,8 +78,10 @@ namespace CSBelt.Controllers
             }
 
             Hobby selectedHobby = db.Hobbies
-
+                .Include(hobby => hobby.Adds)
+                .ThenInclude(Add => Add.AddedBy)
                 .FirstOrDefault(hobby => hobby.HobbyId == hobbyId);
+                
 
             ViewBag.hobbyId = hobbyId;
             return View("HobbyDetails", selectedHobby);
@@ -98,6 +100,7 @@ namespace CSBelt.Controllers
         [HttpPost("/Hobbies/{hobbyId}/Add")] // all params must be in url, only simple types
         public IActionResult Add(int hobbyId)
         {
+
             Add existingAdd = db.Adds.FirstOrDefault(add => add.HobbyId == hobbyId && add.UserId == (int)uid);
 
             if (existingAdd == null)

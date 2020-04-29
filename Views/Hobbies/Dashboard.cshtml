@@ -1,0 +1,45 @@
+@model List<Hobby>
+
+<partial name="_Links"></partial>
+
+<h2 class="text-center">All Hobbies</h2>
+@{
+    int loggedInUserId = (int)Context.Session.GetInt32("UserId");
+}
+<table class="table table-striped border">
+    <thead>
+        <tr>
+            <th scope="col">
+                Name
+            </th>
+            <th scope="col">
+                Enthusiasts
+            </th>
+        </tr>
+    </thead>
+        @foreach (Hobby hobby in Model)
+        {
+            bool IsAdded = hobby.Adds.Any(add => add.UserId == loggedInUserId);
+
+            <div class="card-body">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a asp-action="HobbyDetails" asp-controller="Hobbies" asp-route-hobbyId="@hobby.HobbyId">@hobby.Name</a>
+                            @* <a asp-controller="Hobbies" asp-action="HobbyDetails">@hobby.Name</a> *@
+                        </td>
+                        <td>@hobby.Adds.Count</td>
+                    </tr>
+                </tbody>
+            <div class="row justify-content-center">
+            
+            </div>
+                @* <a asp-action="Details" asp-controller="Home" asp-route-userId="@hobby.UserId">Poster Details</a> *@
+                
+                @* make delete button only for user that created *@
+                @* @if (loggedInUserId == hobby.UserId){
+                    <a class="text-danger" href="/hobby/@hobby.HobbyId/delete">Delete</a>
+                } *@
+            </div>
+        }
+</table>

@@ -44,7 +44,7 @@ namespace CSBelt.Models
         public string PasswordConfirm { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
-        public List<Hobby> Hobbies { get; set; }
+        public List<Hobby> Hobbies { get; set; } // only hobbies created by user
         public List<Add> Adds { get; set; }
         public string FullName()
         {

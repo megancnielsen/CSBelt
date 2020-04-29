@@ -1,0 +1,64 @@
+@model Hobby
+
+<partial name="_Links"></partial>
+
+@{
+    int loggedInUserId = (int)Context.Session.GetInt32("UserId");
+    bool IsAdded = Model.Adds.Any(add => add.UserId == loggedInUserId);
+
+}
+@* Model instead of hobby because it's one hobby *@
+
+<div class="container border mt-2 mb-2">
+    <div class="row border-bottom mb-2">
+        <div class="col-md-5">
+            @* <p>@ViewBag.hobbyId</p> *@
+            <h4>
+                @Model.Name
+            </h4>
+            <p>
+                @Model.Body
+            </p>
+
+            <p>Become an Enthusiast!</p>
+
+            <form
+                method="POST"
+                asp-controller="Hobbies"
+                asp-action="Add"
+                asp-route-hobbyId="@Model.HobbyId"
+            >
+                <button disabled="@IsAdded" class="btn btn-link text-success">
+                    @* <span class="h1"> *@
+                    @Model.Adds.Count
+                    Add to Hobbies    
+                    @* </span> *@
+                </button>
+            </form>
+
+            @foreach (Add add in Model.Adds)
+            {
+                <div class="justify-left border w-20">
+                    @add.AddedBy.Username
+                </div>
+            }
+            
+            @if (loggedInUserId == Model.UserId){
+                <a class="text-danger" href="/hobby/@Model.HobbyId/delete">Delete</a>
+            }
+        </div>
+    </div>
+</div>
+
+
+@* <form
+            method="POST"
+            asp-controller="Hobbies"
+            asp-action="Add"
+            asp-route-hobbyId="@hobby.HobbyId"
+          >
+            <button disabled="@IsAdded" class="btn btn-link text-success border">
+                Add to Hobbies
+               @* @hobby.Adds.Count  
+            </button>
+          </form> *@

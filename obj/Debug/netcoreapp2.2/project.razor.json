@@ -2976,6 +2976,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/megannielsen/Documents/Dojo/Csharp/CSBelt/Views/Hobbies/HobbyDetails.cshtml",
+      "TargetPath": "Views\\Hobbies\\HobbyDetails.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/megannielsen/Documents/Dojo/Csharp/CSBelt/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -2983,6 +2988,11 @@
     {
       "FilePath": "/Users/megannielsen/Documents/Dojo/Csharp/CSBelt/Views/Home/Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/megannielsen/Documents/Dojo/Csharp/CSBelt/Views/Hobbies/New.cshtml",
+      "TargetPath": "Views\\Hobbies\\New.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2996,8 +3006,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/megannielsen/Documents/Dojo/Csharp/CSBelt/Views/Home/_Register.cshtml",
+      "TargetPath": "Views\\Home\\_Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/megannielsen/Documents/Dojo/Csharp/CSBelt/Views/Home/_Login.cshtml",
+      "TargetPath": "Views\\Home\\_Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/megannielsen/Documents/Dojo/Csharp/CSBelt/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/megannielsen/Documents/Dojo/Csharp/CSBelt/Views/Shared/_Links.cshtml",
+      "TargetPath": "Views\\Shared\\_Links.cshtml",
       "FileKind": "mvc"
     },
     {

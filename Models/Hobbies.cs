@@ -30,7 +30,6 @@ namespace CSBelt.Models
             Username = username;
             Body = body;
         }
-
         public Hobby ()
         {
             
